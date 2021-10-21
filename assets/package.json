@@ -7,7 +7,7 @@
     "deploy": "npm run deploy:css && npm run deploy:esbuild",
     "deploy:esbuild": "node esbuild.js --deploy",
     "watch": "node esbuild.js --watch",
-    "deploy:css": "NODE_ENV=production node_modules/.bin/tailwindcss --postcss --minify --input=css/app.css --output=../priv/static/assets/app.css"
+    "deploy:css": "node_modules/.bin/tailwindcss --postcss --minify --input=css/app.css --output=../priv/static/assets/app.css"
   },
   "dependencies": {
     "phoenix": "file:../deps/phoenix",
