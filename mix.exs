@@ -64,7 +64,7 @@ defmodule LiveCms.MixProject do
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
       "assets.deploy": [
-        "cmd yarn --cwd assets",
+        "cmd yarn --cwd assets install --production=false",
         "cmd yarn --cwd assets deploy",
         "phx.digest"
       ]
