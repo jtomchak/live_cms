@@ -1,0 +1,23 @@
+{
+  "name": "live_cms_assets",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "node esbuild.js",
+    "deploy": "npm run deploy:css && npm run deploy:css",
+    "deploy:esbuild": "node esbuild.js --deploy",
+    "watch": "node esbuild.js --watch",
+    "deploy:css": "NODE_ENV=production tailwindcss --postcss --minify --input=css/app.css --output=../priv/static/assets/app.css"
+  },
+  "dependencies": {
+    "phoenix": "file:../deps/phoenix",
+    "phoenix_html": "file:../deps/phoenix_html",
+    "phoenix_live_view": "file:../deps/phoenix_live_view"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "esbuild": "^0.12.24",
+    "postcss": "^8.3.11",
+    "tailwindcss": "^2.2.17"
+  }
+}
