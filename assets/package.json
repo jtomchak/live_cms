@@ -10,13 +10,11 @@
     "deploy:css": "tailwindcss --postcss --minify --input=css/app.css --output=../priv/static/assets/app.css"
   },
   "dependencies": {
+    "autoprefixer": "^10.3.7",
+    "esbuild": "^0.13.8",
     "phoenix": "file:../deps/phoenix",
     "phoenix_html": "file:../deps/phoenix_html",
-    "phoenix_live_view": "file:../deps/phoenix_live_view"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.3.7",
-    "esbuild": "^0.12.24",
+    "phoenix_live_view": "file:../deps/phoenix_live_view",
     "postcss": "^8.3.11",
     "tailwindcss": "^2.2.17"
   }
