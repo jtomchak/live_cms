@@ -15,7 +15,7 @@ if config_env() == :prod do
       """
 
   config :live_cms, LiveCms.Repo,
-    # ssl: true,
+    ssl: true,
     # socket_options: [:inet6],
     url: database_url,
     pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
