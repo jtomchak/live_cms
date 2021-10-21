@@ -63,7 +63,11 @@ defmodule LiveCms.MixProject do
       "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
       "ecto.reset": ["ecto.drop", "ecto.setup"],
       test: ["ecto.create --quiet", "ecto.migrate --quiet", "test"],
-      "assets.deploy": ["cmd npm --prefix i", "cmd npm --prefix assets run deploy", "phx.digest"]
+      "assets.deploy": [
+        "cmd yarn --cwd assets",
+        "cmd yarn --cwd assets deploy",
+        "phx.digest"
+      ]
     ]
   end
 end
