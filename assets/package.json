@@ -7,7 +7,7 @@
     "deploy": "npm run deploy:css && npm run deploy:esbuild",
     "deploy:esbuild": "node esbuild.js --deploy",
     "watch": "node esbuild.js --watch",
-    "deploy:css": "tailwindcss --postcss --minify --input=css/app.css --output=../priv/static/assets/app.css"
+    "deploy:css": "NODE_ENV=production tailwindcss --postcss --minify --input=css/app.css --output=../priv/static/assets/app.css"
   },
   "dependencies": {
     "autoprefixer": "^10.3.7",
@@ -16,6 +16,7 @@
     "phoenix_html": "file:../deps/phoenix_html",
     "phoenix_live_view": "file:../deps/phoenix_live_view",
     "postcss": "^8.3.11",
+    "postcss-import": "^14.0.2",
     "tailwindcss": "^2.2.17"
   }
 }
